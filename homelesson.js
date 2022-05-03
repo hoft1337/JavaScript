@@ -170,8 +170,9 @@
 // calculation(1)
 
 // ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- 
+
 // function calculation() {
-//     let number = +prompt(`Введите любое число. Оно будет умножено на 327 и разделено на 10`)
+//     let number = +prompt(` Введите любое число. Оно будет умножено на 327 и разделено на 10`)
 //     alert (`Ответ = ` + +(number*327/10))
 // }
 // calculation()
@@ -179,3 +180,16 @@
 // 2. Определить функцию с аргументом, которая будет запрашивать число (с помощью prompt), умножать его на то значение, указанное 
 // качестве аргумента. И с помощью alert выдавать полученное значение.
 
+// let a = 0.0001
+// typeof(a) == Number
+// const calculation = function(factor = 1337){
+//     console.log(`Ответ = ` + a*factor)
+// }
+// calculation()
+
+// ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML --
+// function calculation(factor = `1337`) {
+//     let number = +prompt(` Введите любое число`)
+//     alert (`Ответ = ` + number*factor)
+// }
+// calculation()
