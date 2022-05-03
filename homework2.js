@@ -83,17 +83,17 @@
 // 4**. Написать функцию, которая проверяет, является ли слово палиндромом
 // e.g. function isPalindrom(word)
 
-// function isPalindrom(word) {
-//     word = word.toLowerCase()
-//     const len = word.length;
-//     for (let i=0; i < len / 2; i++) {
-//         if(word[i] !== word[len - 1 - i]) {
-//             return ('It`s not a palindrom');
-//         }
-//     }
-//     return ('It is a palindrom')
-// }
-// console.log(isPalindrom('aboba'))
+function isPalindrom(word) {
+    word = word.toLowerCase()
+    const len = word.length;
+    for (let i=0; i < len / 2; i++) {
+        if(word[i] !== word[len - 1 - i]) {
+            return ('It`s not a palindrom');
+        }
+    }
+    return ('It is a palindrom')
+}
+console.log(isPalindrom('Abobus'))
 
 
 
