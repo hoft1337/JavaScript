@@ -193,3 +193,60 @@
 //     alert (`Ответ = ` + number*factor)
 // }
 // calculation()
+
+// УРОК №5. Функции. Возврат значений.
+
+// const sqr = function(a) {
+//     let result = a*a
+//     return result
+// }
+// let result = sqr(4)
+// console.log(result)
+
+// Задача:
+// Написать функцию, которая с помощью prompt запрашивает число у пользователя. Затем эта функция умножает введенное число на 100 и возвращает это значение. 
+// Результат функции должен быть записан в переменнуюю.
+
+
+// let a = 2 // Вместо 'a' подставить любое число
+// const math = function(a){
+//     let result = +a*100
+//     return result
+// }
+// let result = math(a)
+// console.log(result)
+
+// ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML -- ДЛЯ HTML --
+
+// let a = +prompt ('Введите любое число')
+// function math() {
+//     let result = a * 100
+//     return result
+// }
+// let result = math(a)
+// alert(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
