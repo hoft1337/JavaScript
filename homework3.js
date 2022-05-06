@@ -495,3 +495,5 @@ const data = [{
 let unique = Array.from(new Set(data.map(item => JSON.stringify(item)))).map(item => JSON.parse(item));
 
 console.table(unique)
+
+// asdasd
