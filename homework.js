@@ -126,6 +126,8 @@ let age_3 = 60
         checkAGE("17")
         checkAGE("18asd")
         checkAGE(62)
+// 
+
 
 
 

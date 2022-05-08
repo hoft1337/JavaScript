@@ -94,6 +94,7 @@ function isPalindrom(word) {
     return ('It is a palindrom')
 }
 console.log(isPalindrom('Abobus'))
+//
 
 
 
