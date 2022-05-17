@@ -277,13 +277,66 @@
 //     };
 //         let result = func1337()
 //             alert(result)
-/// Конец :) s
+//
+// УРОК №7. Массивы.
+
+// Можно так:
+let arr = new Array()
+
+// И можно так:
+let arr2 = []               // <- так всегда лучше
+
+let arr3 = ['ручка','карандаш']
+let arr4 = [1, 2, 3, 4, 5]
+let arr5 = [
+    {name: 'Name 1', value: 1},
+    {name: 'Name 2', value: 2}
+]
+console.log(arr4.length)            // .lenght возвращает количество элементов в массиве
+console.log(arr4[2])                // таким образом получаем выбранный элемент из массива. Нумерация начинается с нуля!!!
+
+arr4[4] = 1337                      // таким образом мы изменяем элемент массива
+console.log(arr4)
+
+arr4[5] = 'GENIALNO'                // таким образом мы добавляем новый элемент в массив
+console.log(arr4)
 
 
+let emptyArray = []
+emptyArray[0] = 'a'
+emptyArray[1] = 'b'
+emptyArray[2] = 'c'
+console.log(emptyArray)
+
+let oneMoreArray = []
+oneMoreArray.push('вилка')          // таким методом мы добавялем новый элемент в КОНЕЦ!!! массива
+oneMoreArray.push('ложка')
+console.log(oneMoreArray)
+
+oneMoreArray.unshift('циркуль')     // а таким методом - В НАЧАЛЕ!!!
+console.log(oneMoreArray)
+
+oneMoreArray.pop()                  // .pop используется для того, чтобы удалить элемент ИЗ КОНЦА МАССИВА
+console.log(oneMoreArray)
+
+oneMoreArray.shift()                // .shift используется для того, чтобы удалить элемент ИЗ НАЧАЛА МАССИВА
+console.log(oneMoreArray)
 
 
+const arrNames = ['Dima', 'Katya', 'Yura', 'Larisa', 'Kolya'] // чтобы пробежаться по массиву и вывести все его элементы, используем такую конструкцию
+for (let i = 0; i < arrNames.length; i++) {
+    console.log(arrNames[i])
+}
 
+const arrNums = ['1', '2', '3'];    // Так же можно воспользоваться циклов for of. Минус в том, что нельзя получить индекс элемента в массиве.
+    for (let el in arrNums) {
+        console.log(el)
+    }
 
+const lastArray = ['ia', 'vse', 'smogu']    // Так же можно перебрать массив с помощью встроенного метода массива forEach
+lastArray.forEach((elem, index) => {
+    console.log(elem);
+});
 
 
 
