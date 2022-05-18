@@ -281,64 +281,137 @@
 // УРОК №7. Массивы.
 
 // Можно так:
-let arr = new Array()
+// let arr = new Array()
 
-// И можно так:
-let arr2 = []               // <- так всегда лучше
+// // И можно так:
+// let arr2 = []               // <- так всегда лучше
 
-let arr3 = ['ручка','карандаш']
-let arr4 = [1, 2, 3, 4, 5]
-let arr5 = [
-    {name: 'Name 1', value: 1},
-    {name: 'Name 2', value: 2}
-]
-console.log(arr4.length)            // .lenght возвращает количество элементов в массиве
-console.log(arr4[2])                // таким образом получаем выбранный элемент из массива. Нумерация начинается с нуля!!!
+// let arr3 = ['ручка','карандаш']
+// let arr4 = [1, 2, 3, 4, 5]
+// let arr5 = [
+//     {name: 'Name 1', value: 1},
+//     {name: 'Name 2', value: 2}
+// ]
+// console.log(arr4.length)            // .lenght возвращает количество элементов в массиве
+// console.log(arr4[2])                // таким образом получаем выбранный элемент из массива. Нумерация начинается с нуля!!!
 
-arr4[4] = 1337                      // таким образом мы изменяем элемент массива
-console.log(arr4)
+// arr4[4] = 1337                      // таким образом мы изменяем элемент массива
+// console.log(arr4)
 
-arr4[5] = 'GENIALNO'                // таким образом мы добавляем новый элемент в массив
-console.log(arr4)
-
-
-let emptyArray = []
-emptyArray[0] = 'a'
-emptyArray[1] = 'b'
-emptyArray[2] = 'c'
-console.log(emptyArray)
-
-let oneMoreArray = []
-oneMoreArray.push('вилка')          // таким методом мы добавялем новый элемент в КОНЕЦ!!! массива
-oneMoreArray.push('ложка')
-console.log(oneMoreArray)
-
-oneMoreArray.unshift('циркуль')     // а таким методом - В НАЧАЛЕ!!!
-console.log(oneMoreArray)
-
-oneMoreArray.pop()                  // .pop используется для того, чтобы удалить элемент ИЗ КОНЦА МАССИВА
-console.log(oneMoreArray)
-
-oneMoreArray.shift()                // .shift используется для того, чтобы удалить элемент ИЗ НАЧАЛА МАССИВА
-console.log(oneMoreArray)
+// arr4[5] = 'GENIALNO'                // таким образом мы добавляем новый элемент в массив
+// console.log(arr4)
 
 
-const arrNames = ['Dima', 'Katya', 'Yura', 'Larisa', 'Kolya'] // чтобы пробежаться по массиву и вывести все его элементы, используем такую конструкцию
-for (let i = 0; i < arrNames.length; i++) {
-    console.log(arrNames[i])
-}
+// let emptyArray = []
+// emptyArray[0] = 'a'
+// emptyArray[1] = 'b'
+// emptyArray[2] = 'c'
+// console.log(emptyArray)
 
-const arrNums = ['1', '2', '3'];    // Так же можно воспользоваться циклов for of. Минус в том, что нельзя получить индекс элемента в массиве.
-    for (let el in arrNums) {
-        console.log(el)
-    }
+// let oneMoreArray = []
+// oneMoreArray.push('вилка')          // таким методом мы добавялем новый элемент в КОНЕЦ!!! массива
+// oneMoreArray.push('ложка')
+// console.log(oneMoreArray)
 
-const lastArray = ['ia', 'vse', 'smogu']    // Так же можно перебрать массив с помощью встроенного метода массива forEach
-lastArray.forEach((elem, index) => {
-    console.log(elem);
-});
+// oneMoreArray.unshift('циркуль')     // а таким методом - В НАЧАЛЕ!!!
+// console.log(oneMoreArray)
+
+// oneMoreArray.pop()                  // .pop используется для того, чтобы удалить элемент ИЗ КОНЦА МАССИВА
+// console.log(oneMoreArray)
+
+// oneMoreArray.shift()                // .shift используется для того, чтобы удалить элемент ИЗ НАЧАЛА МАССИВА
+// console.log(oneMoreArray)
 
 
+// const arrNames = ['Dima', 'Katya', 'Yura', 'Larisa', 'Kolya'] // чтобы пробежаться по массиву и вывести все его элементы, используем такую конструкцию
+// for (let i = 0; i < arrNames.length; i++) {
+//     console.log(arrNames[i])
+// }
+
+// const arrNums = ['1', '2', '3'];    // Так же можно воспользоваться циклов for of. Минус в том, что нельзя получить индекс элемента в массиве.
+//     for (let el in arrNums) {
+//         console.log(el)
+//     }
+
+// const lastArray = ['ia', 'vse', 'smogu']    // Так же можно перебрать массив с помощью встроенного метода массива forEach
+// lastArray.forEach((elem, index) => {
+//     console.log(elem);
+// });
+
+
+// УРОК №8. Методы массивов splice, slice, concat.
+
+// let languages = ['python', 'java', 'js'] 
+// languages.splice(0,2) // Первый аргумент - номер элемента в массиве, с которого нужно начать удаление. Второй аргумент - количество элементов, которое нужно удалить.
+// console.log(languages) // Итого, этим методом удалили 2 элемента массива, начания с первого [0].
+
+// let countries = ['Russia', 'Ukraine', 'Tadjikistan']
+// countries.splice(0, 2, 'Spain', 'Portugal', 'Brazil') // Таким методом можно удалить необходимое количество элементов, и поставить на их место новые элементы.
+// console.log(countries)
+
+// // В этом методе аргументы работают так: первый аргумент - индекс элемента С которого нужно начинать копирование. Второй аргумент - индекс, ДО которого нужно копировать
+// // элементы не включая его. То есть citys.slice(1,3) - это значит, скопирей мне элементы массива 1 и 2, не включая третьего, хотя он является аргументом метода.
+// // Если аргменты отрицательные числа, то в таком случае отсчет будет начинаться с конца массива.
+// let citys = ['Moscow', 'Milan', 'Kiev', 'Minsk', 'Washington']
+// const newList = citys.slice(1,3) // Метод копирует указанные элементы массива и создает из них новый. Метод slice не изменяет исходный массив, а возвращает новый, поэтому 
+// console.log(newList) // задается новая переменная. (Как я понял, лучше работать через const)
+
+// let number = ['1', '2', '3']
+// let letters = ['a', 'b', 'c']
+// const summary = number.concat(letters); // Тут всё предельно просто, метод создает из нескольких массивов один, объединяя их. Результатом является создание нового массива.
+// console.log(summary)
+
+// let abra = ['1']
+// let abraPlus = abra.concat(['kadabra', 'boom'], 'lol') // Ещё можно сделать и так.
+// console.log(abraPlus)
+
+
+// УРОК №9. Методы массивов find | findindex |filter ||||| find | findindex |filter ||||| find | findindex |filter
+// const cars = [
+//     {id : 1, model : 'Ferrari'},
+//     {id : 2, model : 'Audi'},
+//     {id : 3, model : 'Toyota'}
+// ]
+
+// const audi = cars.find(function(item, index, arr){
+//     return item.model === 'Audi'
+// })
+// console.log (audi)
+
+// Так как второй и третий аргументы функции нам не нужны (они используются крайне редко), то мы можем вообще от них избавиться. И записать всё через стрелочную функцию.
+// const cars = [
+//     {id : 1, model : 'Ferrari'},
+//     {id : 2, model : 'Audi'},
+//     {id : 3, model : 'Toyota'}
+// ]
+
+// const audi = cars.find(item => item.model === 'Audi') // Так запись выглядит намного короче и читается проще.
+// console.log(audi)
+
+// const cars = [
+//     {id : 1, model : 'Ferrari'},
+//     {id : 2, model : 'Audi'},
+//     {id : 3, model : 'Toyota'}
+// ]
+
+// const audi = cars.findIndex(item => item.model === 'Audi') // Метод findindex работает точно так же как и метод find, но возвращает не сам элемент, а просто его индекс.
+// console.log(audi)
+
+// const cars = [
+//     {id : 1, model : 'Ferrari'},
+//     {id : 2, model : 'Audi'},
+//     {id : 3, model : 'Toyota'},
+//     {id : 2, model : 'Suzuki'}
+// ]
+
+// const filterCars = cars.filter(item => item.id % 2 === 0) // Отличие этого метода от метода find в том, что он не прекращает свою работу после первого найденного элемента, а
+// console.log(filterCars) // продолжает ее. И соответственно этот метод возвращает массив элементов в call-back функцию. Тут кстати запись item => item.id % 2 означает найти все 
+// // четные id массива. И перебираться будет массив до самого конца, пока не найдутся все элементы с четным id.
+
+//УРОК №9. Методы массивов map | sort ||||| map | sort ||||| map | sort ||||| map | sort 
+ let numbers = [2, 3, 4, 5, 6, 7]
+ let result = numbers.map(n => n**5) // Тут не до конца понятно как работает, нужно разбираться дальшею. Не понимаю как его можно применить на практике.
+ console.log(result)
 
 
 
