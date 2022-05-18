@@ -409,21 +409,148 @@
 // // четные id массива. И перебираться будет массив до самого конца, пока не найдутся все элементы с четным id.
 
 //УРОК №9. Методы массивов map | sort ||||| map | sort ||||| map | sort ||||| map | sort 
- let numbers = [2, 3, 4, 5, 6, 7]
- let result = numbers.map(n => n**5) // Тут не до конца понятно как работает, нужно разбираться дальшею. Не понимаю как его можно применить на практике.
- console.log(result)
+
+// let numbers = [2, 3, 4, 5, 6, 7]
+// let result = numbers.map(n => n**5) // Тут не до конца понятно как работает, нужно разбираться дальшею. Не понимаю как его можно применить на практике.
+// console.log(result)
+
+// let characters = ['a', 'z', 'g', 'q', 'e'] 
+// characters.sort() // При помощи этой команды мы просто отсортировали элементы массива по латинскому алфавиту
+// console.log(characters)
+
+// let numbers = [45, 4, 2, 1, -50, 300, 0];
+// numbers.sort();
+// console.log(numbers)
+// При такой постановке задачи, числа не сортируются в порядке возрастания, так как метод преобразует элементы к строковому типу. И по лексикографическому порядку строка 300
+// больше чем строка 4. Короче говоря, не понятно почему так, но нужно указывать ещё ряд аргументов.
 
 
+// let numbers = [45, 4, 2, 1, -50, 300, 0];
+
+// function compare (a,b) {  // Чтобы сортировка сработала правильно, нужно писать такие условия для этого метода
+//     if (a > b) return 1;
+//     if (a === b) return 0;
+//     if (a < b) return -1;
+// }
+// numbers.sort(compare)
+// console.log(numbers)
+
+// Но ещё это можно записать и так!!! Через стрелочную функцию
 
 
+// let numbers = [45, 4, 2, 1, -50, 300, 0]; // Но это работает не всегда, к сожалению.
+// numbers.sort((a,b) => a - b)
+// console.log(numbers)
+
+//УРОК №10. Методы массивов reverse | split | join ||||| reverse | split | join ||||| reverse | split | join 
+
+// let languages = ['python', 'java', 'c++', 'js']
+// languages.reverse() // Тут всё просто. Данный метод переворачивает массив - первый элемент становится последним, а последний первым.
+
+// console.log(languages)
+
+// let words = 'cat, dog, snake, elephant, tiger'
+// const arr = words.split(',') // Этот метод помагает получить из строки массив. Аргумент, который мы передает (в нашем случае ",") является разделителем для метода.
+
+// console.log(arr)
+
+// let str = 'Im fucking elite man'
+// const arr = str.split('') // А ещё можно сделать так, чтобы разбить строку побуквенно и преобразовать это в массив.
+// console.log(arr)
+
+// let str = 'Strongest Array'
+// const arr = str.split() // Если аргумент вообще не указывать, то вся строка просто превратится в массив
+// console.log(arr)
+
+// let arr = ['cat', 'dog', 'snake']
+// const str = arr.join('#') // Обратный методу split - переводит массив в строку вставляя между элементами указанный разделитель (в нашем случае #)
+// console.log(str)
 
 
+// let arr = ['cat', 'dog', 'snake']
+// const str = arr.join('') // Если разделитель вообще не ставить, то весь массив превращается в одну большую строку.
+// console.log(str)
+
+// let arr = ['cat', 'dog', 'snake']
+// const str = arr.join() // Ну а если скобки аргумента вообще оставить пустыми, то метод сам по-умолчанию разделит элементы запятой
+// console.log(str)
+
+//УРОК №11. Методы массивов indexOf | lastIndexOf | includes ||||| indexOf | lastIndexOf | includes ||||| indexOf | lastIndexOf | includes
+
+// const languages = ['python', 'java', 'js']
+// const javaIndex = languages.indexOf('java') // Вообще данный метод имеет два аргумента: 1 - значение, которое ты пытаешься найти в массиве, 2 - с какого индекса начать поиск
+// console.log(javaIndex) // Если указанного значения не существует - результатом выдачи будет просто "-1"
+
+// const languages = ['python', 'java', 'js']
+// const javaIndex = languages.lastIndexOf('python') // Чет криво работает, но поидее тоже самое что и indexOf, только начинает поиск с конца массива.
+// console.log(javaIndex) 
+
+// const languages = ['python', 'java', 'js']
+// console.log(languages.includes('js')) // Этот метод проверяет, существует ли указанное значние в массиву или нет. Возвращает true либо false.
+// console.log(languages.includes('c++')) // Этот метод так же имеет и второй аргумент, который будет указывать на то, с какого элемента массива необходимо начать поиск.
+
+//УРОК №12. Методы массивов reduce | spread
+
+// const numbers = [50, 51, 1]
+// const results = numbers.reduce(function(previousValue, currentElem){
+//     return previousValue + currentElem //Этот метод сосчитал для нас сумма массива, непонятно каким образом xd
+// }, 0);
+// console.log(results) // Данный метод - "что-то на тяжелом", лучше обращаться к справочнику и работать с ним с данным методом.
+// Так же у вышеуказанного метода есть собрат - метод reduceRight, который делает всё то же самок, только начиная с конца.
+
+// const numbers = [1, 2, 3, 4]
+// const array = [...numbers, ...[5, 6, 7]] //таким образом можно присоединить к массиву другой массив. оператор spread = ... (да, он записывается тремя точками)
+// console.log(array)
+
+// const numbers = [1,2,3,4,5]
+// const newArray = [6,7,8,9,10]
+
+// const resultArr = [...numbers, ...newArray] // Так же можно объединять 2 и более массивов в один.
+// console.log(resultArr)
 
 
+// const numbers = [1,3,5,7]
+// const newArray = [...numbers] // А ещё и просто скопировать массив.
+// console.log(newArray)
 
+//УРОК №13. Методы массивов Array.isArray | some | every
 
+// const object = {name : 'Dimas'};
+// const arr = [1,2,3]
+// console.log(Array.isArray(arr))  //Просто показывает, являются ли переданные данные массивом в виде true или false.
+// console.log(Array.isArray(object))
 
+// const numbers = [20, 45, 12, -4, 5, 7]
+// const has = numbers.some(n => (n/2) >= 10) // Таким методом можно определить, есть ли числа в массиве, которые делятся на 2 и их остаток больше 10. Не знаю зачем :)
+// console.log(has) // Резульатат - true или false
 
+// const numbers = [20, 30, 40]
+// const othernumbers = [20, 10, 40]
+
+// const hasInNumbers = numbers.every(n => (n/2) >= 10) // Данный метод похож на метод some, только поставленному условию должны удовлетворять все элементы массива.
+// const hasInOtherNumbers = othernumbers.every(n => (n/2) >= 10) // В этом случае условию не удовлетворяет элемент массива = 10
+
+// console.log(hasInNumbers)
+// console.log(hasInOtherNumbers)
+
+//УРОК №13. Методы массивов flat | fill
+
+// const arr = [1,2,3,[4,5],[[7,8]]]
+// const transformArr = arr.flat() // Данный метод создает один общий массив из подмассивов на указанное значние. В () как раз указывается число уровней, на которых нужно
+// // распаковать массив. По умолчанию это 1, поэтому резульатом такой функции будет - [ 1, 2, 3, 4, 5, [ 7, 8 ] ]. Если в () поставим 2 - то всё превратится в 1 массив.
+
+// console.log(transformArr)
+
+// const arr = [1,2,3,[4,5],[[7,8]]]
+// const transformArr = arr.flat(Infinity) // Ну а если нужно убрать прямо все уровни, то в виде аргумента просто передаем бесконечность. Так точно останется 1-уровневый массив.
+
+// console.log(transformArr)
+
+const arr = [1,2,3,4]
+arr.fill(1337,2,4)
+console.log(arr)
+
+// Рассмотрим как работает. Первый аргумент - значение, которое заполняет или заменяет элементы массива. Второй аргумент - с какого элемента начинаем, третий - каким закончим.
 
 
 
